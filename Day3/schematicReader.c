@@ -5,6 +5,8 @@ void getSize(int* vertical, int* horizontal, char* fileName);
 
 void fillSchematic(char** schematic, char* fileName);
 
+int checkChar(char** schematic, int row, int col);
+
 int main(int argc, char* argv[]){
     int horizontalSize, verticalSize;
 
@@ -31,7 +33,7 @@ int main(int argc, char* argv[]){
 
     for(int i = 0; i < horizontalSize; i++){
         for(int j = 0; j < verticalSize; j++){
-
+            
         }
     }
 } 
@@ -82,4 +84,10 @@ void fillSchematic(char** schematic, char* fileName){
     }
 
     fclose(fptr); 
+}
+
+int checkChar(char** schematic, int row, int col){
+    if(schematic[row][col] == '.')
+        return -1;
+    
 }
